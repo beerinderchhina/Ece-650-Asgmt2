@@ -94,7 +94,7 @@ int main()
     free(adj);
     free(parent);
   }
-
+return 0;
 }
 
 
