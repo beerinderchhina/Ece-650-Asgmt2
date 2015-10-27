@@ -3,10 +3,11 @@
  * and print shortest path between vertices.
  */
 
+#define _GNU_SOURCE
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define _GNU_SOURCE
+
 
 
 /* function to read edges for current graph of size V */
