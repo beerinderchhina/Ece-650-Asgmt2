@@ -82,6 +82,8 @@ int main()
           printf("\n");
         }
         break;
+      default:
+        printf("Error: Not valid input");
     }
   }
   if (adj != NULL) { /* free the dynamic array */
