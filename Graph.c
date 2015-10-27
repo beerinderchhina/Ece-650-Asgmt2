@@ -72,6 +72,10 @@ int main()
       case 'S':
         /* display shortest path between vertices */
         scanf("%d %d", &src, &des);
+        if (src < 0 || src >= V || des < 0 || des >= V) {
+          printf("Error: either vertex %d or %d is invalid.\n", src, des);
+          break;
+        }
         memset(parent, -1, sizeof(int) * V);
         BFS(V, adj, parent, src, des);
         if (parent[des] == -1) {
@@ -155,7 +159,7 @@ void BFS(int V, char *adj, int parent[], int src, int des)
 
     if (curr == des) {
       /* found the destination */
-      return;
+      break;
     }
 
     /* visit all adjacent vertices if not visited yet */
