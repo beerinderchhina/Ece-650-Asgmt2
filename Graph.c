@@ -39,6 +39,7 @@ int main()
     switch (c) {
 
       case 'V':
+      case 'v':
         /* start a new graph, need to reset adjacent matrix */
         scanf("%d", &V);
         if (V <= 0) {
@@ -61,12 +62,14 @@ int main()
         break;
 
       case 'E':
+      case 'e':
         /* load edges for the current graph */
         memset(adj, 0, V * V);
         readEdges(V, adj);
         break;
 
       case 's':
+      case 'S':
         /* display shortest path between vertices */
         scanf("%d %d", &src, &des);
         memset(parent, -1, sizeof(int) * V);
